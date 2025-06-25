@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row; /* Mobil cihazlarda menü öğelerini yatay olarak düzenler */
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000; /* Siyah renk */
+}
+
+.nav-item i {
+    font-size: 20px; /* İkon boyutu küçültüldü */
+}
+
+.nav-item span {
+    font-size: 10px; /* Yazı boyutu küçültüldü */
+    margin-top: 5px;
+}
+
+/* Ekle kısmının rengi */
+.nav-item:nth-child(3) {
+    color: #007bff; /* Mavi renk */
+}
+
+/* Masaüstü medya sorgusu */
+@media (min-width: 768px) {
+    footer {
+        width: 60px; /* Genişlik azaltıldı */
+        height: 100vh; /* Ekran yüksekliğine kadar uzatıldı */
+        bottom: 0;
+        left: 0;
+        top: 0; /* Üst kısma yerleştirildi */
+        border-right: 1px solid #ddd; /* Sağ kenar eklenildi */
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Masaüstü cihazlarda menü öğelerini dikey olarak düzenler */
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 20px 0; /* Yatay boşluk eklenildi */
+    }
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  width: 408px;
+  height: 240px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+a{
+  padding: 10px 20px;
+  margin: 10px;
+ text-decoration: none;
+  color: purple;
+  border: none;
+  cursor: pointer;
+  height:100px;
+  width:200px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* KARTLARIM SAYFASI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nav{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nav h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.nav i{
+font-size: 32px;
+position: fixed;
+top: 7%;
+right: 30px;
+transform: translateY(-50%);
+}
+
+.content{
+  margin: 10px;
+}
+/* 
+
+
+.kutu h1{
+  margin-left:  10px; ;
+
+} */
+
+.kutu {
+  display: flex;
+  width: 100%;
+  height: 110px;
+  background-color: #F5F6F7;
+  border-radius: 10px;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+.kutu i{
+  margin-left: 10%;
+  font-size: 25px;
+}
+
+.contentimg img {
+  max-width: 100%;
+  height: auto;
+  width: 140px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+
+.contenttext{
+  margin-left: 10px;
+
+}
+.contenttext h1{
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.contenttext p,b {
+  font-family: "Poppins", sans-serif;
+  margin-top: -10px;
+}
+
+.logout-button {
+    background-color: transparent;
+    color: #ff0000;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.logout-button:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+

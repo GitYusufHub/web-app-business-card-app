@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #qrCode {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>QR Code Generator</h1>
+<form id="qrForm">
+    <label for="url">Enter URL:</label><br>
+    <input type="text" id="url" name="url" required><br><br>
+    <button type="submit">Generate QR Code</button>
+</form>
+<div id="qrCode"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script>
+    document.getElementById('qrForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var urlInput = document.getElementById('url').value;
+        if(urlInput.trim() !== '') {
+            var qrCodeDiv = document.getElementById('qrCode');
+            qrCodeDiv.innerHTML = ''; // Clear any existing QR code
+            
+            var qr = new QRious({
+                element: qrCodeDiv,
+                value: urlInput,
+                size: 256
+            });
+
+            // Download QR code as PNG
+            var downloadLink = document.createElement('a');
+            downloadLink.href = qr.toDataURL();
+            downloadLink.download = 'qr_code.png';
+            downloadLink.innerHTML = 'Download QR Code';
+            qrCodeDiv.appendChild(downloadLink);
+        } else {
+            alert('Please enter a valid URL.');
+        }
+    });
+</script>
+</body>
+</html>

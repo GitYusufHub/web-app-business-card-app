@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DijiKart Web Uygulaması</title>
+
+    <!-- Apple Meta Tags for Full-Screen Experience -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="diji.png">
+
+    <!-- Inline Manifest for PWA -->
+    <script type="application/json" id="manifest">
+    {
+      "name": "DijiKart",
+      "short_name": "DijiKart",
+      "description": "DijiKart Web Uygulaması",
+      "start_url": "/",
+      "display": "standalone",
+      "background_color": "#FFFFFF",
+      "theme_color": "#000000",
+      "icons": [
+        {
+          "src": "diji.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "diji.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Basic Styling for Popup Guide -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #addToHomeScreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #addToHomeScreen img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        #addToHomeScreen button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hoş Geldiniz DijiKart!</h1>
+    <button onclick="showAddToHomeScreen()">Ana Ekrana Ekle</button>
+
+    <!-- Full-Screen Popup Guide -->
+    <div id="addToHomeScreen">
+        <img src="diji.png" alt="DijiKart Logo">
+        <p>Uygulamamızı ana ekrana ekleyerek daha hızlı erişim sağlayabilirsiniz! <br>
+        Lütfen tarayıcı menüsünden 'Paylaş' simgesine dokunun ve ardından 'Ana Ekrana Ekle' seçeneğini seçin.</p>
+        <button onclick="hideAddToHomeScreen()">Kapat</button>
+    </div>
+
+    <script>
+        // Show Add to Home Screen Guide
+        function showAddToHomeScreen() {
+            document.getElementById("addToHomeScreen").style.display = "flex";
+        }
+
+        // Hide Add to Home Screen Guide
+        function hideAddToHomeScreen() {
+            document.getElementById("addToHomeScreen").style.display = "none";
+        }
+
+        // Inject Manifest into Head
+        const manifestData = document.getElementById('manifest').textContent;
+        const manifestBlob = new Blob([manifestData], { type: 'application/json' });
+        const manifestURL = URL.createObjectURL(manifestBlob);
+        const link = document.createElement('link');
+        link.rel = 'manifest';
+        link.href = manifestURL;
+        document.head.appendChild(link);
+    </script>
+
+</body>
+</html>

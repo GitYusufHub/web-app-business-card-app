@@ -1,0 +1,75 @@
+/* KARTLARIM SAYFASI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nav{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nav h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.nav i{
+font-size: 32px;
+position:absolute;
+top: 5%;
+right: 20px;
+transform: translateY(-50%);
+}
+
+.content{
+  margin: 10px;
+}
+/* 
+
+
+.kutu h1{
+  margin-left:  10px; ;
+
+} */
+
+.kutu {
+  display: flex;
+  width: 100%;
+  height: 110px;
+  background-color: #F5F6F7;
+  border-radius: 10px;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+.kutu i{
+  margin-left: 5%;
+  font-size: 20px;
+}
+
+.contentimg img {
+  max-width: 100%;
+  height: auto;
+  width: 140px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+
+.contenttext{
+  margin-left: 10px;
+
+}
+.contenttext h1{
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.contenttext p,b {
+  font-family: "Poppins", sans-serif;
+  margin-top: -10px;
+  font-size: 15px;
+}

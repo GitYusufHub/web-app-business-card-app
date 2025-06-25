@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: gray;  
+  padding: auto;
+  margin: auto;
+  user-select: none;
+  
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.profile{
+ width: 100%;
+  max-width: 500px;
+  height: auto;
+    background-image:url('images/de5.jpg');  
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#qr {
+  color:white;
+  font-size: 25px;
+  margin: 20px;
+}
+
+#edit {
+  color: white;
+  font-size: 23px;
+  margin: 20px;
+}
+
+.yuvarlak{
+  align-items: center;
+  text-align: center;
+  margin-top: 20px
+  
+}
+
+.yuvarlak img{
+width: 200px;
+height: 200px;
+border-radius: 100%;
+}
+
+.baslik {
+  display: flex; 
+  align-items: center; 
+    justify-content: center;
+    margin-bottom: -55px;
+    margin-top: -20px;
+
+}
+
+.baslik h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.baslik img{
+    width: 30px;
+    height: 30px;
+}
+
+.yuvarlak h4{
+    font-family: 'barbie', sans-serif;
+    font-size: 17px;
+    color: white;
+    font-weight: 300;
+}
+
+
+.socailm{
+  text-align: center;
+  color: blue;
+  font-size: 28px;
+  
+}
+
+.socailm a{
+  color:white;
+}
+
+.socailm i{
+  margin-right: 13px;
+}
+
+.bio{
+  width: auto;
+  height: auto;
+  background-color:;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 25px;
+  border-radius: 10px;
+  
+}
+
+.bio p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px auto;
+  color:white;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.blg{
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.blgd{
+  width: auto;
+  height: auto;
+   background-color:#BF00FF66 ;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+}
+
+.blgd i{
+  font-size: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.blgd p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+   color:white;
+  font-weight: 600;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: ;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.link img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  margin-right: 1px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.link h1 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.link p {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+
+.link h1 {
+  font-size: 23px;
+}
+
+.link p {
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+
+.bnk{
+  width: auto;
+  height: auto;
+  background-color:#BF00FF66;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+
+.bnk h1{
+  color:#FFA500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.cizgiler{
+  width: auto;
+  height: 1px;
+  background-color: white;
+  margin-top: -5px;
+}
+
+.ibn{
+  margin-left: 15px;
+}
+
+.ibn h2{
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.ibn p{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -20px;
+}
+
+.ypn{
+  align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ypn img{
+  width: 200px;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: -45px;
+}
+
+.ypn p{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-top: -50px;
+}
+
+.ypn a{
+  text-decoration: none;
+  color: white;
+}

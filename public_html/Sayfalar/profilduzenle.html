@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DijiKart Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    user-select: none;
+    background-color: white;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.nav h1{
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.nav #left{
+    margin-left: 15px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.content{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: -25px;
+}
+
+.content h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content form{
+    margin-bottom: 30px;
+}
+
+.content select{
+    width: 103%;
+    height: 45px;
+    background-color: #F5F6F7;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:400;
+    font-style: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #F5F6F7;
+    border-radius: 8px;
+    justify-content: space-between;
+  }
+  
+  #custom-button {
+    padding: 13px;
+    background-color: #539DF3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:600;
+    font-style: normal;
+    border-radius: 0 10px 10px 0;
+    margin-right: -10px;
+    width: 15%;
+}
+
+#custom-button1 {
+    background-color: #539DF3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:600;
+    font-style: normal;
+    border-radius: 10px 0 0 10px;
+    margin-right: -10px;
+    width: 13%;
+    height: 100%;
+}
+  
+  #custom-text {
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:400;
+    font-style: normal;
+  }
+
+.form h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:400;
+    font-style: normal;
+}
+
+.form input{
+    width: 100%;
+    height: 45px;
+    background-color: #F5F6F7;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.sinput{
+    width: 85%;
+    height: 48px;
+    border: none;
+    background-color: #F5F6F7;
+    border-radius: 0 8px 8px 0 ;
+    padding-left: 10px;
+    margin-right: -10px;
+}
+
+
+form input{
+    width: 100%;
+    height: 45px;
+    background-color: #F5F6F7;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:400;
+    font-style: normal;
+}
+
+.submit{
+    width: 100%;
+    height: 50px;
+    background-color: #539DF3;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+form p{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight:400;
+    font-style: normal;
+    color: #539DF3;
+}
+</style>
+<body>
+    <div class="nav">
+       <a href="kartlarım.html"><i class="fa-solid fa-arrow-left" id="left"></i></a> 
+        <h1>Profil Düzenle</h1>
+    </div>
+    <div class="content">
+        <h1>KİŞİSEL BİLGİLER</h1>
+        <form action="">
+            <div class="file-upload">
+                <input type="file" id="real-file" hidden="hidden" />
+                <span id="custom-text">Fotoğraf Seç</span>
+                <button type="button" id="custom-button">Seç</button>
+              </div>
+              <div class="form">
+                <h3>Ad Soyad</h3>
+                <input type="text">
+            </div>
+            <div class="form">
+                <h3>Ünvan / Meslek</h3>
+                <input type="text">
+            </div>
+            <div class="form">
+                <h3>Telefon</h3>
+                <input type="tel">
+            </div>
+            <div class="form">
+                <h3>E Posta</h3>
+                <input type="email">
+            </div>
+            <div class="form">
+                <h3>Website</h3>
+                <input type="url">
+            </div>
+            <div class="form">
+                <h3>Hakkımda</h3>
+                <input type="text">
+            </div>
+        </form>
+        <h1>SOSYAL MEDYA</h1>
+        <form action="">
+            <div class="file-upload" style="margin-top: 10px; margin-bottom: 30px;">
+                <button type="button" id="custom-button1"><i class="fa-brands fa-instagram" style="font-size: 30px;"></i></button>
+                <input class="sinput" type="text">
+              </div>
+            <div class="file-upload" style="margin-top: -20px; margin-bottom: 30px;">
+                <button type="button" id="custom-button1"><i class="fa-brands fa-facebook-f" style="font-size: 30px;"></i></button>
+                <input class="sinput" type="text">
+              </div>
+              <div class="file-upload" style="margin-top: -20px;  margin-bottom: 30px;">
+                <button type="button" id="custom-button1"><i class="fa-brands fa-x-twitter" style="font-size: 30px;"></i></button>
+                <input class="sinput" type="text">
+              </div>
+              <div class="file-upload" style="margin-top: -20px;  margin-bottom: 30px;">
+                <button type="button" id="custom-button1"><i class="fa-brands fa-whatsapp" style="font-size: 30px;"></i></button>
+                <input class="sinput" type="text">
+              </div>
+
+              <p><i class="fa-solid fa-plus"></i> Ekle</p>
+        </form>
+        <h1>BANKA BİLGİLERİ</h1>
+        <form action="">
+                <select name="subject" id="subject">
+                   <option value="" selected="selected">Banka Seçin</option>
+                   <option value="">Garanti BBVA</option>
+                   <option value="">Türkiye İş Bankası</option>
+                   <option value="">Akbank</option>
+                   <option value="">Ziraat Bankası</option>
+                   <option value="">Halkbank</option>
+                   <option value="">VakıfBank</option>
+                   <option value="">Yapı Kredi</option>
+                 </select>
+                 <input type="text" placeholder="İBAN Numarası girin">
+                
+                 <select name="subject" id="subject">
+                    <option value="" selected="selected">Banka Seçin</option>
+                    <option value="">Garanti BBVA</option>
+                    <option value="">Türkiye İş Bankası</option>
+                    <option value="">Akbank</option>
+                    <option value="">Ziraat Bankası</option>
+                    <option value="">Halkbank</option>
+                    <option value="">VakıfBank</option>
+                    <option value="">Yapı Kredi</option>
+                  </select>
+                  <input type="text" placeholder="İBAN Numarası girin">
+
+                  <select name="subject" id="subject">
+                    <option value="" selected="selected">Banka Seçin</option>
+                    <option value="">Garanti BBVA</option>
+                    <option value="">Türkiye İş Bankası</option>
+                    <option value="">Akbank</option>
+                    <option value="">Ziraat Bankası</option>
+                    <option value="">Halkbank</option>
+                    <option value="">VakıfBank</option>
+                    <option value="">Yapı Kredi</option>
+                  </select>
+                  <input type="text" placeholder="İBAN Numarası girin">
+        </form>
+
+        <input class="submit" type="submit" value="KAYDET">  
+
+    </div>
+</body>
+<script>
+    const realFileBtn = document.getElementById("real-file");
+    const customBtn = document.getElementById("custom-button");
+    const customTxt = document.getElementById("custom-text");
+
+    customBtn.addEventListener("click", function() {
+    realFileBtn.click();
+    });
+
+    realFileBtn.addEventListener("change", function() {
+    if (realFileBtn.value) {
+        customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]; // Dosya adını alır ve gösterir
+    } else {
+        customTxt.innerHTML = "Fotoğraf Seç";
+    }
+    });
+
+</script>
+</html>

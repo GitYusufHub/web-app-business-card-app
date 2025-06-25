@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DijiKart Portal</title>
+	    <link rel="stylesheet" href="style.css">
+		    <link rel="stylesheet" href="kartd.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    *{
+        font-family: "Poppins", sans-serif;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .k{
+        width: 40px;
+        height: 40px;
+        background-color: #F5F6F7;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .k i{
+        font-size: 20px;
+    }
+
+    .nav h1{
+        font-weight: 600;
+    }
+
+    /*KART KODU*/
+
+    /* styles.css */
+
+    .card-container {
+        perspective: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .card {
+    width: 340px;
+    height: 220px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    }
+
+    .card .front, .card .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        color: #fff; /* Arka plan resmine göre rengi ayarlayabilirsiniz */
+    }
+
+    .card .front {
+        background-image: url('assets/front.png'); /* Ön yüzün arka plan resmi */
+        border: 2px solid #F5F6F7;
+    }
+
+    .card .back {
+        background-image: url('assets/back.png'); /* Arka yüzün arka plan resmi */
+        transform: rotateY(180deg);
+        border: 2px solid #F5F6F7;
+
+    }
+
+    .card.flip {
+        transform: rotateY(180deg);
+    }
+
+    /*KARD KOD SON*/
+
+    .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    }
+
+    .btn button {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    }
+
+    .btna, .ppd {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 50px;
+        background-color: #F5F6F7;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .btnb, .kgt  {
+        display: flex;
+        width: 100%;
+        height: 50px;
+    /*   background-color: #F5F6F7; */
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .button-bottom {
+        border: none;
+        border-radius: 8px;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-bottom a {
+        padding: 10px 20px;
+        margin: 10px;
+        text-decoration: none;
+        color: purple;
+        border: none;
+        cursor: pointer;
+        height: 100px;
+        width: 200px;
+    }
+
+    .btna:hover{
+        background-color: blue;
+        color:white
+    }
+
+    .button-bottom:hover{
+        background-color: red;
+        color: white;
+    }
+
+    .content h1 {
+        margin-left: 5%;
+        font-size: 25px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+    }
+
+    .okt {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 50px;
+    }
+
+    .oktb {
+        height: 50px auto;
+        background-color: #F5F6F7;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+
+    .oktb i {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .oktb p {
+        font-size: 17px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+    }
+
+    .front .b{
+        color: black;
+        position: absolute;
+        top: 169px;
+        left: 40px;
+        font-size: 23px;
+    }
+
+    .front em {
+        position: absolute;
+        top: 192px;
+        left: 40px;
+        font-size: 14px;
+    }
+
+    .front .qrcode {
+        margin: 0 auto;
+        position: absolute;
+        left: 313px;
+        top: 154px;
+    }
+
+</style>
+<body>
+    <div class="nav">
+        <a href="kartlarım.php">
+            <div class="k">
+            <i class="fa-solid fa-arrow-left" id="left"></i>
+            </div>
+        </a>
+        <h1>Kart Detay</h1>
+    </div>
+
+
+    <?php
+    session_start();
+    if (!isset($_SESSION['username'])) {
+        header("Location: login.php");
+        exit();
+    }
+    include "db_connection.php";
+
+    if (isset($_GET['id'])) {
+        $kartvizit_id = $_GET['id'];
+
+        // Kartvizitin detaylarını sorgula
+        $sql = "SELECT * FROM kartvizit WHERE id = $kartvizit_id";
+        $result = $conn->query($sql);
+
+        if ($result !== false && $result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+    ?>
+
+
+    <div class="content">
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                <b class="b"><?php echo  $row['name'];?></b><br>
+                <em style="em"><?php echo  $row['title'];?></em><br>
+                <div id="qrcode" class="qrcode"></div>
+                <div class="back">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+
+            <a class="ppd" style="text-decoration: none;" href='edit_card.php?id=<?php echo $row['id']; ?>'>
+                <button class="btna">
+                    <i class="fa-solid fa-pen"></i> Profil Düzenle
+                </button>
+            </a>
+
+            
+            <div class="btnb">
+
+                <a class="kgt" href='card.php?id=<?php echo $row['id']; ?>'>
+                    <button class="button-bottom" style="margin-right: 10px;">
+                            <i class="fa-solid fa-credit-card"></i> Görüntüle
+                    </button>
+                </a>
+
+                <a class="kgt" href="songirisbilgi.php">
+                    <button class="button-bottom" >
+                        <i class="fa-solid fa-gears"></i> Kart Detay
+                </button>
+                </a>
+                
+            </div>
+        </div>
+        <h1>Son Okutmalar</h1>
+        <div class="okt">
+        <div class="oktb" style="height: 50px auto; padding: 10px;">
+            <i class="fa-solid fa-bell"></i>
+            <p><div id="datetime"></div></p><br>
+        </div>
+        <br>
+        <div class="oktb">
+            <i class="fa-solid fa-bell"></i>
+            <p> <div id="device"></div></p>
+        </div>
+        <br>
+    </div>
+</div>
+<br>
+<?php
+    } else {
+        echo "<p>Kartvizit Bulunamadı :( </p>";
+    }
+}
+?>
+
+
+
+<script>
+// script.js
+    document.addEventListener('DOMContentLoaded', () => {
+    const card = document.querySelector('.card');
+
+    // Herhangi bir yere tıklanıldığında kartın ön yüze dönmesini sağlar
+    document.body.addEventListener('click', () => {
+        if (card.classList.contains('flip')) {
+            card.classList.remove('flip');
+        }
+    });
+
+    // Kartın üzerine gelindiğinde arka yüzünün görünmesi için hover class ekle
+    card.addEventListener('mouseenter', () => {
+        card.classList.add('flip');
+    });
+
+    // Kartın üzerinden çıkıldığında hover class'ını kaldır
+    card.addEventListener('mouseleave', () => {
+        card.classList.remove('flip');
+    });
+
+    // Kartın tıklamasının body'ye yayılmasını engeller
+    card.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+});
+
+    window.onload = function() {
+            // Tarih ve zamanı al
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var formattedDate = day + '/' + month + '/' + year;
+            var formattedTime = hours + ':' + minutes + ':' + seconds;
+
+            // Cihaz bilgisini al
+            var device = navigator.userAgent;
+
+            // Tarih, zaman ve cihaz bilgisini göster
+            document.getElementById('datetime').innerHTML = '<strong>Giriş Tarihi:</strong> ' + formattedDate + '<br><strong>Giriş Saati:</strong> ' + formattedTime;
+            document.getElementById('device').innerHTML = '<strong>Cihaz:</strong> ' + device;
+
+            // Sayfanın URL'sini al
+            var url = window.location.href;
+            // QR kod oluştur
+            var qr = qrcode(0, 'M');
+            qr.addData(url);
+            qr.make();
+            var qrImage = qr.createImgTag(2, 0); // QR kodunun boyutunu 1 olarak belirle (daha küçük)
+            // QR kodu göster
+            document.getElementById("qrcode").innerHTML = qrImage;
+        };
+
+    });
+
+</script>
+</body>
+</html>

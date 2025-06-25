@@ -1,0 +1,69 @@
+body{
+	
+	
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  width: 408px;
+  height: 240px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   background-image: url("img/yusuf.png");
+   
+}
+
+.card-back {
+ background-image: url("img/kapak1.png");
+  transform: rotateY(180deg);
+}
+
+a{
+  padding: 10px 20px;
+  margin: 10px;
+ 
+  color: purple;
+  border: none;
+  cursor: pointer;
+  height:100px;
+  width:200px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
